@@ -25,7 +25,6 @@ body {
 header,
 footer {
   background-color: var(--dark);
-  color: var(--light);
 }
 .hero,
 .info,
@@ -55,6 +54,17 @@ ul {
   display: flex;
   gap: 24px;
 }  
+a:link {
+  text-decoration: none;
+  color: var(--gray);
+}
+a:visited {
+  color: var(--gray);
+}
+a:hover {
+  color: var(--light);
+  text-shadow: 0 0 4px var(--light);
+}
 .title {
   padding: 6rem 0 6.5rem;
   display: flex;
@@ -62,29 +72,16 @@ ul {
   align-items: center;
   gap: 3.5rem;
 }
-.title figure {
-  max-width: 480px;
-  max-height: 270px;
-  flex: 0 1 auto;
-  background-color: #797f89;
-}
 .title div {
   flex: 1 1 0;
 }
-.title img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  filter:  blur(1px) hue-rotate(165deg);
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--light);
 }
-.title figcaption {
-  text-align: center;
-  padding: 2px 0;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.title img:hover {
-  cursor: pointer;
-  filter: none;
+h1 + p {
+  color: var(--gray);
 }
 button {
   background-color: var(--blue);
@@ -99,6 +96,34 @@ button {
 button:hover {
   border: 2px inset var(--blue);
   cursor: pointer;
+}
+.title figure {
+  max-width: 480px;
+  max-height: 270px;
+  flex: 0 1 auto;
+}
+.title img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter:  blur(1px) hue-rotate(165deg);
+}
+.title img:hover {
+  cursor: pointer;
+  filter: none;
+}
+.title figcaption {
+  text-align: center;
+  padding: 2px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--light);
+}
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--dark);
+  text-align: center;
+  margin: 3rem 0;
 }
 .gallery {
   display: flex;
@@ -124,6 +149,12 @@ button:hover {
 .quote {
   padding: 7rem 6.5rem;
 }
+.quote-text {
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--dark);
+}
 .quote-text + p {
   text-align: right;
   font-size: 22px;
@@ -142,9 +173,14 @@ button:hover {
 .action div {
   margin: 3rem 0;
 }
+h3 {
+  font-size: 24px;
+  color: var(--light);
+  padding-left: 1rem;
+}
 .action p {
   color: var(--gray);
-  padding: 0 0.5rem;
+  padding: 0 1rem;
 }
 .action button {
   border: 2px solid var(--light);
@@ -155,49 +191,10 @@ button:hover {
   color: var(--blue);
   border: 2px inset var(--blue);
 }
-h1 {
-  font-size: 48px;
-  font-weight: bold;
-  color: var(--light);
-}
-h2 {
-  font-size: 36px;
-  font-weight: bold;
-  color: var(--dark);
-  text-align: center;
-  margin: 3rem 0;
-}
-h3 {
-  font-size: 24px;
-  color: var(--light);
-  padding-left: 1rem;
-}
-.quote-text {
-  font-size: 36px;
-  font-style: italic;
-  font-weight: 300;
-  color: var(--dark);
-}
-h1 + p {
-  color: var(--gray);
-}
-a:link {
-  text-decoration: none;
-  color: var(--gray);
-}
-a:visited {
-  color: var(--gray);
-}
-a:hover {
-  color: var(--light);
-  text-shadow: 0 0 4px var(--light);
-}
-
 footer {
   height: 100px;
   color: var(--gray);
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
